@@ -1,0 +1,14 @@
+.container{
+  margin-left:7%;
+}
+.project{
+    float: left;
+    margin: 5px;
+    padding: 15px;
+    max-width: 300px;
+    /*height: 300px;*/
+    /*border: 1px solid black;*/
+    box-shadow: 0.5px 2px 1px #999999;
+    background-color:#f2f2f2;
+    /*background-image: url("../img/IMG_20141203_112642.jpg");*/
+}
