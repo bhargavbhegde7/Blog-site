@@ -9,8 +9,5 @@ app.config(function($routeProvider) {
     })
     .when("/projects", {
         templateUrl : "views/projects.html"
-    })
-    .when("/cv", {
-        templateUrl : "views/resume_bhargava_b_hegde.pdf"
     });
 });
