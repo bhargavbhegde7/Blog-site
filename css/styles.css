@@ -1,0 +1,28 @@
+/* for materialize sticky footer */
+/*body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+  }
+
+  main {
+    flex: 1 0 auto;
+  }*/
+
+.contact_info{
+
+}
+.projects{
+  
+}
+.profile_pic{
+  border-radius: 50%;
+  margin-top: 4%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  background-color: white;
+  padding: 2%;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+  /*margin-bottom: 2%;*/
+}
