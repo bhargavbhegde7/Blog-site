@@ -166,15 +166,25 @@ function updateGrid(){
 }
 
 function startGame(){
-
-
-
-
-
-  intervalID = setInterval(updateGrid, 50);
-
+  intervalID = setInterval(updateGrid, 500);
 }
 
 function pauseGame(){
   clearInterval(intervalID);
+}
+
+function canMoveLeft(tile){
+  return true;
+}
+
+function moveLeft(){
+  if(canMoveLeft(currentTile)){
+    removeFromGrid(currentTile);
+
+    for (var i = 0; i < currentTile.length; i++) {
+      currentTile[i] -= 1;
+    }
+
+    pushToGrid(currentTile);
+  }
 }

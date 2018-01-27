@@ -16,19 +16,31 @@
       </div>
       <div class="details-display">
         <p>details-display</p>
-        <button onclick="startGame()">start</button>
-        <button onclick="pauseGame()">pause</button>
+        <button onclick="startGame()" style="height: 20%; width: 49%;">start</button>
+        <button onclick="pauseGame()" style="height: 20%; width: 49%;">pause</button>
       </div>
     </div>
     <div class="control-panel">
       <div class="move-controls">
         <div class="horizontal-controls">
-          <div class="left-btn-panel">left-btn-panel</div>
-          <div class="right-btn-panel">right-btn-panel</div>
+          <div class="left-btn-panel">
+            <p>left-btn-panel</p>
+            <button onclick="moveLeft()" style="height: 50%; width: 75%;">Letf</button>
+          </div>
+          <div class="right-btn-panel">
+            <p>right-btn-panel</p>
+            <button onclick="moveRight()" style="height: 50%; width: 75%;">Right</button>
+          </div>
         </div>
-        <div class="vertical-controls">vertical-controls</div>
+        <div class="vertical-controls">
+          <p>vertical-controls</p>
+          <button onclick="moveDown()" style="height: 50%; width: 75%;">Down</button>
+        </div>
       </div>
-      <div class="rotate-controls">rotate-controls</div>
+      <div class="rotate-controls">
+        <p>rotate-controls</p>
+        <button onclick="rotate()" style="height: 50%; width: 75%;">Rotate</button>
+      </div>
     </div>
   </div>
 </body>
