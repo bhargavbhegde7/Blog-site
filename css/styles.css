@@ -16,6 +16,10 @@
   box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);  
 }
 
+#name{
+  font-size: 140%;
+}
+
 .icon{
   width: 25px;
 }
