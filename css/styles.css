@@ -1,28 +1,70 @@
-/* for materialize sticky footer */
-/*body {
-    display: flex;
-    min-height: 100vh;
-    flex-direction: column;
-  }
-
-  main {
-    flex: 1 0 auto;
-  }*/
-
-.contact_info{
-
+.center{
+  margin: auto;
 }
-.projects{
-  
+
+#allfather{
+  background-color: white;
 }
-.profile_pic{
+
+#profile_pic{
   border-radius: 50%;
   margin-top: 4%;
   margin-left: auto;
   margin-right: auto;
   display: block;
   background-color: white;
-  padding: 2%;
-  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+  padding: 1%;
+  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);  
   /*margin-bottom: 2%;*/
 }
+
+/* On screens that are 1920px or less */
+@media screen and (max-width: 1920px) {
+  body {    
+    background-color: lightgrey;
+  }
+  #allfather{
+    width: 60%;
+  }
+  #profile_pic{
+    width: 15%;
+  }
+}/* 1920px */
+
+/* On screens that are 1500px or less */
+@media screen and (max-width: 1500px) {
+  #allfather{
+    width: 70%;
+  }
+  #profile_pic{
+    width: 15%;
+  }
+}/* 1500px */
+
+/* On screens that are 1250px or less */
+@media screen and (max-width: 1250px) {
+  #allfather{
+    width: 90%;
+  }
+}/* 1250px */
+
+/* On screens that are 1000px or less */
+@media screen and (max-width: 1000px) {
+  #allfather{
+    width: 100%;
+  }
+}/* 1000px */
+
+/* On screens that are 750px or less */
+@media screen and (max-width: 750px) {
+  #profile_pic{
+    width: 20%;
+  }
+}/* 750px */
+
+/* On screens that are 500px or less */
+@media screen and (max-width: 500px) {
+  #profile_pic{
+    width: 25%;
+  }
+}/* 500px */
