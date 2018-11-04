@@ -1,10 +1,11 @@
-.center{
-  margin: auto;
-}
-
+body {    
+    background-color: white;
+    font-family: "Lucida Console", Arial, serif;
+  }
+  
 #allfather{
   background-color: white;
-  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);
+  /*box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);*/
   padding: 2%;
 }
 
@@ -20,6 +21,10 @@
   font-size: 140%;
 }
 
+.center{
+  margin: auto;
+}
+
 .icon{
   width: 25px;
 }
@@ -30,11 +35,7 @@
 }
 
 /* On screens that are 1920px or less */
-@media screen and (max-width: 1920px) {
-  body {    
-    background-color: lightgrey;
-    font-family: "Lucida Console", Arial, serif;
-  }
+@media screen and (max-width: 1920px) {  
   #allfather{
     width: 60%;
   }
