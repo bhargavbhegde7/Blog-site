@@ -1,8 +1,9 @@
 body {    
     background-color: white;
     font-family: "Lucida Console", Arial, serif;
+    /*color: rgb(80, 80, 80);*/
   }
-  
+
 #allfather{
   background-color: white;
   /*box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);*/
@@ -13,12 +14,17 @@ body {
   margin-top: 4%;
   display: block;
   background-color: white;
-  padding: 1%;
-  box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);  
+  padding: 5px;
+  /*box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);*/  
+  border: solid grey 1px;
 }
 
 #name{
   font-size: 140%;
+}
+
+.inner-description{
+  padding-left: 4%;
 }
 
 .center{
@@ -27,6 +33,7 @@ body {
 
 .icon{
   width: 25px;
+  height: 25px;
 }
 
 .contact-link{
