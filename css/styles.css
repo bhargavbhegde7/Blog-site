@@ -1,90 +1,130 @@
 body {    
-    background-color: white;
-    font-family: "Lucida Console", Arial, serif;
-    /*color: rgb(80, 80, 80);*/
-  }
-
-#allfather{
-  background-color: white;
-  /*box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);*/
-  padding: 2%;
+  background-color: rgb(30, 30, 30);
+  font-family: "Lucida Console", Arial, serif;  
 }
 
-#profile_pic{
-  margin-top: 4%;
-  display: block;
-  background-color: white;
-  padding: 5px;
-  /*box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 2px 7px 0 rgba(0, 0, 0, 0.19);*/  
-  border: solid grey 1px;
+#parent-of-all {
+  display: grid;
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;  
 }
 
 #name{
-  font-size: 140%;
+  font-size: 40px;
+  margin-left: 100px;
+  margin-top: 150px;
+  color: white;
 }
 
-.inner-description{
-  padding-left: 4%;
+.contact-info{
+  color: white;
 }
 
-.center{
-  margin: auto;
+.hover-bright{
+  opacity: 0.5;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  -webkit-transition-duration: 1s; /* Safari */
+  transition-duration: 1s;
 }
 
-.icon{
-  width: 25px;
-  height: 25px;
+.hover-bright:hover{
+  opacity: 1.0;
+  filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
-.contact-link{
-  display:inline;
-  margin-right: 3%;
+.two-cell-row{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
-/* On screens that are 1920px or less */
-@media screen and (max-width: 1920px) {  
-  #allfather{
-    width: 60%;
-  }
-  #profile_pic{
-    width: 15%;
-  }
-}/* 1920px */
+.cell{
+  height: 588px;/* ////    600 - 2*(margin)   ///// */
+  width: auto;
+  margin: 6px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  border-radius: 5px;
+}
 
-/* On screens that are 1500px or less */
-@media screen and (max-width: 1500px) {
-  #allfather{
-    width: 70%;
-  }
-  #profile_pic{
-    width: 15%;
-  }
-}/* 1500px */
+.cell:hover{
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.2);
+}
 
-/* On screens that are 1250px or less */
-@media screen and (max-width: 1250px) {
-  #allfather{
-    width: 90%;
-  }
-}/* 1250px */
+.half-cell-cover{
+  width: 100%;
+  border-radius: 5px;
+}
 
-/* On screens that are 1000px or less */
-@media screen and (max-width: 1000px) {
-  #allfather{
-    width: 95%;
+@media screen and (max-width: 1350px) {
+  #parent-of-all {
+    width: 1000px;
   }
-}/* 1000px */
-
-/* On screens that are 750px or less */
-@media screen and (max-width: 750px) {
-  #profile_pic{
-    width: 20%;
+  .cell{
+    height: 488px;/* 500-2*margin */
   }
-}/* 750px 
+  #name{
+    font-size: 70px;
+    margin-left: 100px;
+    margin-top: 150px;
+  }
+}
 
-/* On screens that are 500px or less */
+@media screen and (max-width: 1100px) {
+  #parent-of-all {
+    width: 800px;
+  }
+  .cell{
+    height: 388px;/* 400-2*margin */
+  }
+  #name{
+    font-size: 50px;
+    margin-left: 90px;
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  #parent-of-all {
+    width: 600px;
+  }
+  .cell{
+    height: 288px;/* 300-2*margin */
+  }
+  #name{
+    font-size: 30px;
+    margin-left: 85px;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  #parent-of-all {
+    width: 400px;
+  }
+  .cell{
+    height: 388px;/* 400-2*margin */
+  }
+  #name{
+    font-size: 50px;
+    margin-left: 85px;
+  }
+  .two-cell-row{
+    grid-template-columns: 1fr;
+  }
+}
+
 @media screen and (max-width: 500px) {
-  #profile_pic{
-    width: 25%;
+  #parent-of-all {
+    width: 250px;
   }
-}/* 500px 
+  .cell{
+    height: 238px;/* 250-2*margin */
+  }
+  #name{
+    font-size: 30px;
+    margin-left: 55px;
+    margin-top: 80px;
+  }
+  .two-cell-row{
+    grid-template-columns: 1fr;
+  }
+}
