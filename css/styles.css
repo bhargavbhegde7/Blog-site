@@ -3,6 +3,10 @@ body {
   font-family: "Lucida Console", Arial, serif;  
 }
 
+a{
+  text-decoration: none;
+}
+
 #parent-of-all {
   display: grid;
   width: 1200px;
@@ -24,7 +28,7 @@ body {
 
 #skills{
   margin-top: -434px;
-  line-height: 15%;
+  line-height: 15%;  
 }
 
 #python{
