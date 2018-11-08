@@ -1,1 +1,3 @@
-var projects = "Hello World!";
+function loadProjects(){
+	
+}

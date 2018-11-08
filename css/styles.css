@@ -23,14 +23,13 @@ body {
 }
 
 #skills{
-  margin-top: -400px;
-  /*font-weight: bold;*/
-  line-height: 80%;
+  margin-top: -434px;
+  line-height: 15%;
 }
 
 #python{
   margin-left: 400px;
-  font-size: 25px;
+  font-size: 20px;
 }
 
 #android{
@@ -92,8 +91,62 @@ body {
   font-size: 20px;
 }
 
+#tensorflow{
+  margin-left: 440px;
+  font-size: 16px;
+}
+
+#keras{
+  margin-left: 40px;
+  font-size: 18px;
+}
+
+#raspberrypi{
+  margin-left: 140px;
+  font-size: 20px;
+}
+
+#websockets{
+  margin-left: 17px;
+  font-size: 17px;
+}
+
+#c{
+  margin-left: 500px;
+  font-size: 20px;
+}
+
+#opencv{
+  margin-left: 200px;
+  font-size: 12px;
+}
+
+#nodemcu{
+  margin-left: 300px;
+  font-size: 25px;
+}
+
+#chatbot{
+  margin-left: 100px;
+  font-size: 20px;
+}
+
+#microservices{
+  margin-left: 250px;
+  font-size: 14px;
+}
+
+#docker{
+  margin-left: 440px;
+  font-size: 20px;
+}
+
 .contact-info{  
   margin-left: 100px;
+}
+
+.white-border{
+  border:solid white 1px;
 }
 
 .white-text{
@@ -146,7 +199,128 @@ body {
   .contact-info{
     margin-left: 80px;
   }
-}
+  #skills{
+    margin-top: -340px;
+    line-height: 0%;
+  }
+  #projects-banner{
+    font-size: 80px;
+  }
+
+  #python{
+    margin-left: 400px;
+    font-size: 20px;
+  }
+
+  #android{
+    margin-left: 70px;
+    font-size: 20px;
+  }
+
+  #network{
+    margin-left: 220px;
+    font-size: 18px;
+  }
+
+  #robotics{
+    margin-left: 380px;
+    font-size: 18px;
+  }
+
+  #image-processing{
+    margin-left: 30px;
+    font-size: 15px;
+  }
+
+  #concurrency{
+    margin-left: 300px;
+    font-size: 20px;
+  }
+
+  #java{
+    margin-left: 100px;
+    font-size: 20px;  
+  }
+
+  #cpp{
+    margin-left: 250px;
+    font-size: 20px;
+  }
+
+  #golang{
+    margin-left: 350px;
+    font-size: 15px;
+  }
+
+  #iot{
+    margin-left: 30px;
+    font-size: 14px;
+  }
+
+  #ml{
+    margin-left: 230px;
+    font-size: 20px;
+  }
+
+  #web{
+    margin-left: 90px;
+  }
+
+  #nodejs{
+    margin-left: 330px;
+    font-size: 20px;
+  }
+
+  #tensorflow{
+    margin-left: 380px;
+    font-size: 16px;
+  }
+
+  #keras{
+    margin-left: 40px;
+    font-size: 18px;
+  }
+
+  #raspberrypi{
+    margin-left: 140px;
+    font-size: 20px;
+  }
+
+  #websockets{
+    margin-left: 17px;
+    font-size: 17px;
+  }
+
+  #c{
+    margin-left: 450px;
+    font-size: 20px;
+  }
+
+  #opencv{
+    margin-left: 200px;
+    font-size: 12px;
+  }
+
+  #nodemcu{
+    margin-left: 300px;
+    font-size: 25px;
+  }
+
+  #chatbot{
+    margin-left: 100px;
+    font-size: 20px;
+  }
+
+  #microservices{
+    margin-left: 250px;
+    font-size: 14px;
+  }
+
+  #docker{
+    margin-left: 380px;
+    font-size: 20px;
+  }
+}/* 1350 */
 
 @media screen and (max-width: 1100px) {
   #parent-of-all {
@@ -162,7 +336,129 @@ body {
   .contact-info{
     margin-left: 50px;
   }
-}
+  #skills{
+    margin-top: -280px;
+    line-height: 0%;
+  }
+  #projects-banner{
+    font-size: 70px;
+    margin-left: 20px;
+  }
+
+  #python{
+    margin-left: 270px;
+    font-size: 14px;
+  }
+
+  #android{
+    margin-left: 70px;
+    font-size: 13px;
+  }
+
+  #network{
+    margin-left: 200px;
+    font-size: 14px;
+  }
+
+  #robotics{
+    margin-left: 160px;
+    font-size: 11px;
+  }
+
+  #image-processing{
+    margin-left: 30px;
+    font-size: 15px;
+  }
+
+  #concurrency{
+    margin-left: 200px;
+    font-size: 16px;
+  }
+
+  #java{
+    margin-left: 100px;
+    font-size: 14px;  
+  }
+
+  #cpp{
+    margin-left: 250px;
+    font-size: 15px;
+  }
+
+  #golang{
+    margin-left: 40px;
+    font-size: 15px;
+  }
+
+  #iot{
+    margin-left: 130px;
+    font-size: 14px;
+  }
+
+  #ml{
+    margin-left: 230px;
+    font-size: 15px;
+  }
+
+  #web{
+    margin-left: 90px;
+  }
+
+  #nodejs{
+    margin-left: 280px;
+    font-size: 16px;
+  }
+
+  #tensorflow{
+    margin-left: 180px;
+    font-size: 16px;
+  }
+
+  #keras{
+    margin-left: 40px;
+    font-size: 18px;
+  }
+
+  #raspberrypi{
+    margin-left: 140px;
+    font-size: 14px;
+  }
+
+  #websockets{
+    margin-left: 17px;
+    font-size: 17px;
+  }
+
+  #c{
+    margin-left: 310px;
+    font-size: 12px;
+  }
+
+  #opencv{
+    margin-left: 200px;
+    font-size: 12px;
+  }
+
+  #nodemcu{
+    margin-left: 300px;
+    font-size: 15px;
+  }
+
+  #chatbot{
+    margin-left: 100px;
+    font-size: 12px;
+  }
+
+  #microservices{
+    margin-left: 220px;
+    font-size: 14px;
+  }
+
+  #docker{
+    margin-left: 60px;
+    font-size: 14px;
+  }
+}/* 1100 */
 
 @media screen and (max-width: 900px) {
   #parent-of-all {
@@ -177,7 +473,130 @@ body {
   .contact-info{
     margin-left: 30px;
   }
-}
+  #skills{
+    margin-top: -220px;
+    line-height: 0%;
+  }
+  #projects-banner{
+    font-size: 50px;
+    margin-left: 20px;
+  }
+
+  #python{
+    margin-left: 210px;
+    font-size: 10px;
+  }
+
+  #android{
+    margin-left: 10px;
+    font-size: 13px;
+  }
+
+  #network{
+    margin-left: 110px;
+    font-size: 14px;
+  }
+
+  #robotics{
+    margin-left: 160px;
+    font-size: 11px;
+  }
+
+  #image-processing{
+    margin-left: 30px;
+    font-size: 11px;
+  }
+
+  #concurrency{
+    margin-left: 150px;
+    font-size: 12px;
+  }
+
+  #java{
+    margin-left: 100px;
+    font-size: 14px;  
+  }
+
+  #cpp{
+    margin-left: 250px;
+    font-size: 11px;
+  }
+
+  #golang{
+    margin-left: 40px;
+    font-size: 12px;
+  }
+
+  #iot{
+    margin-left: 130px;
+    font-size: 10px;
+  }
+
+  #ml{
+    margin-left: 20px;
+    font-size: 11px;
+  }
+
+  #web{    
+    margin-left: 90px;
+    font-size: 11px;
+  }
+
+  #nodejs{
+    margin-left: 200px;
+    font-size: 12px;
+  }
+
+  #tensorflow{
+    margin-left: 180px;
+    font-size: 10px;
+  }
+
+  #keras{
+    margin-left: 40px;
+    font-size: 11px;
+  }
+
+  #raspberrypi{
+    margin-left: 140px;
+    font-size: 11px;
+  }
+
+  #websockets{
+    margin-left: 17px;
+    font-size: 12px;
+  }
+
+  #c{
+    margin-left: 240px;
+    font-size: 12px;
+  }
+
+  #opencv{
+    margin-left: 20px;
+    font-size: 12px;
+  }
+
+  #nodemcu{
+    margin-left: 210px;
+    font-size: 15px;
+  }
+
+  #chatbot{
+    margin-left: 100px;
+    font-size: 12px;
+  }
+
+  #microservices{
+    margin-left: 110px;
+    font-size: 14px;
+  }
+
+  #docker{
+    margin-left: 10px;
+    font-size: 14px;
+  }
+}/* 900 */
 
 
 @media screen and (max-width: 700px) {
@@ -196,7 +615,129 @@ body {
   .two-cell-row{
     grid-template-columns: 1fr;
   }
-}
+  #skills{
+    margin-top: -270px;
+    line-height: 0%;
+  }
+  #projects-banner{
+    font-size: 70px;
+    margin-left: 20px;
+  }
+
+  #python{
+    margin-left: 270px;
+    font-size: 14px;
+  }
+
+  #android{
+    margin-left: 70px;
+    font-size: 13px;
+  }
+
+  #network{
+    margin-left: 200px;
+    font-size: 14px;
+  }
+
+  #robotics{
+    margin-left: 160px;
+    font-size: 11px;
+  }
+
+  #image-processing{
+    margin-left: 30px;
+    font-size: 15px;
+  }
+
+  #concurrency{
+    margin-left: 200px;
+    font-size: 16px;
+  }
+
+  #java{
+    margin-left: 100px;
+    font-size: 14px;  
+  }
+
+  #cpp{
+    margin-left: 250px;
+    font-size: 15px;
+  }
+
+  #golang{
+    margin-left: 40px;
+    font-size: 15px;
+  }
+
+  #iot{
+    margin-left: 130px;
+    font-size: 14px;
+  }
+
+  #ml{
+    margin-left: 230px;
+    font-size: 15px;
+  }
+
+  #web{
+    margin-left: 90px;
+  }
+
+  #nodejs{
+    margin-left: 280px;
+    font-size: 16px;
+  }
+
+  #tensorflow{
+    margin-left: 180px;
+    font-size: 16px;
+  }
+
+  #keras{
+    margin-left: 40px;
+    font-size: 18px;
+  }
+
+  #raspberrypi{
+    margin-left: 140px;
+    font-size: 14px;
+  }
+
+  #websockets{
+    margin-left: 17px;
+    font-size: 17px;
+  }
+
+  #c{
+    margin-left: 310px;
+    font-size: 12px;
+  }
+
+  #opencv{
+    margin-left: 200px;
+    font-size: 12px;
+  }
+
+  #nodemcu{
+    margin-left: 300px;
+    font-size: 15px;
+  }
+
+  #chatbot{
+    margin-left: 100px;
+    font-size: 12px;
+  }
+
+  #microservices{
+    margin-left: 220px;
+    font-size: 14px;
+  }
+
+  #docker{
+    margin-left: 60px;
+    font-size: 14px;
+  }
+}/* 700 */
 
 @media screen and (max-width: 500px) {
   #parent-of-all {
@@ -215,4 +756,127 @@ body {
   .sub-name-detail{
     font-size: 12px;
   }
-}
+  #skills{
+    margin-top: -175px;
+    line-height: 0%;
+  }
+  #projects-banner{
+    font-size: 42px;
+    margin-left: 20px;
+  }
+
+  #python{
+    margin-left: 180px;
+    font-size: 10px;
+  }
+
+  #android{
+    margin-left: 10px;
+    font-size: 9px;
+  }
+
+  #network{
+    margin-left: 80px;
+    font-size: 9px;
+  }
+
+  #robotics{
+    margin-left: 160px;
+    font-size: 8px;
+  }
+
+  #image-processing{
+    margin-left: 30px;
+    font-size: 8px;
+  }
+
+  #concurrency{
+    margin-left: 150px;
+    font-size: 9px;
+  }
+
+  #java{
+    margin-left: 100px;
+    font-size: 10px;  
+  }
+
+  #cpp{
+    margin-left: 210px;
+    font-size: 11px;
+  }
+
+  #golang{
+    margin-left: 40px;
+    font-size: 9px;
+  }
+
+  #iot{
+    margin-left: 100px;
+    font-size: 10px;
+  }
+
+  #ml{
+    margin-left: 20px;
+    font-size: 9px;
+  }
+
+  #web{    
+    margin-left: 90px;
+    font-size: 8px;
+  }
+
+  #nodejs{
+    margin-left: 190px;
+    font-size: 10px;
+  }
+
+  #tensorflow{
+    margin-left: 160px;
+    font-size: 10px;
+  }
+
+  #keras{
+    margin-left: 40px;
+    font-size: 9px;
+  }
+
+  #raspberrypi{
+    margin-left: 140px;
+    font-size: 10px;
+  }
+
+  #websockets{
+    margin-left: 17px;
+    font-size: 12px;
+  }
+
+  #c{
+    margin-left: 210px;
+    font-size: 8px;
+  }
+
+  #opencv{
+    margin-left: 20px;
+    font-size: 8px;
+  }
+
+  #nodemcu{
+    margin-left: 170px;
+    font-size: 12px;
+  }
+
+  #chatbot{
+    margin-left: 60px;
+    font-size: 10px;
+  }
+
+  #microservices{
+    margin-left: 110px;
+    font-size: 9px;
+  }
+
+  #docker{
+    margin-left: 40px;
+    font-size: 8px;
+  }
+}/* 500 */
