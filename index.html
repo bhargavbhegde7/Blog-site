@@ -16,6 +16,11 @@
       <!-- Compiled and minified JavaScript -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
       
+
+      <!-- for code highlight -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
+
       <script type="text/javascript">
         $(document).ready(function(){
           $('.sidenav').sidenav();
@@ -49,8 +54,111 @@
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
 
-        
+        <h2>How to train your Dinosaur</h2>
+        <h4>Part 1 - Inception: </h4>
+        <img class="responsive-img" src="images/dinosaur.jpg">
+        <p class="flow-text">
+          We have all seen the t-rex dinosaur game on the chrome offline page above. Agreeably it is a pretty fun game. But the problem was I couldn’t get past an average score. Being an engineer, I wanted to do something about it. I am not mathematician, I am not PhD, and neither do I hold multiple degrees. So I set out to find something with which I can hack my way in and use it for my own purposes.
+        </p>
+        <p class="flow-text">
+          The full code for the project can be found <a href="https://github.com/bhargavbhegde7/LearnANN" target="_blank">here</a>.
+        </p>
 
+        <h4>Part 2 - Planning: </h4>
+        <p class="flow-text">
+          Our requirement is something like this - we need a program that processes the game frame by frame and uses a machine learning model that recognizes the frame of the game in which the obstacle is nearing the player (dinosaur in this case) and triggers a jump. For this, we need a classification model, which can take a frame as the input. The output of our model should have a value between 0 and 1, where zero means stay down and one means jump. We repeat this process for every frame of the game in real time and trigger jump when we receive the output as 1.
+        </p>
+        <p class="flow-text">
+          This quest led me to <a href="https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/" target="_blank">this</a> article where the author teaches how to implement a handwriting recognition program using tensorflow and keras. (<a href="https://github.com/bhargavbhegde7/LearnANN/blob/942bb82ced5d32d504bb5a9735e42559510fa1cd/tensorflow/handwriting.py" target="_blank">code</a>)
+        </p>
+        <h4>Part 3 - Preparation: </h4>
+        <p class="flow-text">
+          This is the hardest part of the project, because it includes some actual studying, not just munching through the code like a caveman. 
+        </p>
+        <p class="flow-text">
+          To make changes to the above program I had to understand how classifications usually work in machine learning. This led me to artificial neural networks. Neural networks can be used for solving classification problems. They use back propagation technique to get better at things. <a href="https://karpathy.github.io/neuralnets/" target="_blank">This</a> blog has an incredible explanation about neural networks and the basics of back propagation.
+        </p>
+        <p class="flow-text">
+          The first step is to modify the handwriting code we have so that it can recognize only one number. This is to make sure that the model is capable of recognizing just one particular image. Anything else, and it outputs a zero.
+        </p>
+        <p class="flow-text">
+          If you take a look at the handwriting recognition code <a href="https://github.com/bhargavbhegde7/LearnANN/blob/942bb82ced5d32d504bb5a9735e42559510fa1cd/tensorflow/handwriting.py" target="_blank">here</a>, the model has four layers. One input layer - this has 784 neurons, two hidden layers and one output layer. The output layer has ten neurons, one for each digit. (What we need is the output layer to have only two neurons, one indicating 0 and other indicating 1).
+        </p>
+
+        <h4>Part 4 - Proof of concept: </h4>
+        <p class="flow-text">
+          Now it is time to check if what we are trying to achieve actually works. If we succeed to make this model recognize a single digit instead of all 10 of them, we can be sure that we can in theory make it recognize a different set of images that we are going to give it in the later steps. 
+        </p>
+        <p class="flow-text">
+          As we discussed, let’s make some modifications to the handwriting recognition code so that it is able to recognize only one number, say 7. If you are anything like me, you’d want to have a peek at the finished code of a single digit recognizer before reading about it. <a href="https://github.com/bhargavbhegde7/LearnANN/blob/942bb82ced5d32d504bb5a9735e42559510fa1cd/tensorflow/onePicRecogniser.py" target="_blank">Here</a> is the code after the modification.
+        </p>
+        <p class="flow-text">
+          Let us see what all these modifications mean. 
+        </p>
+        <p class="flow-text">
+          This is just for printing out the configurations of your setup. 
+        </p>
+        <pre>
+          <code class="language-python flow-text">
+            sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+          </code>
+        </pre>
+        <p class="flow-text">
+          What was then called <code class="language-python">y_test</code>, now I am calling <code class="language-python">y_test_old</code> because we are going to call the modified test data set <code class="language-python">y_test</code> later on. Same way, call <code class="language-python">y_train</code> as <code class="language-python">y_train_old</code>.
+        </p>
+        <p class="flow-text">
+          Then,
+        </p>
+        <pre>
+          <code class="language-python flow-text">
+            indicesToKeep = []
+            for idx, val in tqdm(enumerate(y_train_old)):
+                if y_train_old[idx] == 7:
+                    indicesToKeep.append(idx)
+
+            y_train = np.zeros((60000,), dtype=int)
+
+            for index in tqdm(indicesToKeep):
+            y_train[index] = 1
+          </code>
+        </pre>
+        <p class="flow-text">
+          We want the labels of our training data set (<code class="language-python flow-text">y_train</code>) to contain only zeros and ones instead of it having a value from 0 to 9 as before. Now in <code class="language-python flow-text">y_train</code> all the ‘1’s indicate images in the <code class="language-python flow-text">x_train</code> which look like a 7 and all the ‘0’s indicate anything other than 7.
+        </p>
+        <p class="flow-text">
+          We want our output layer to have only 2 neurons. Output neurons indicate 0 and 1 respectively. If the first one gives high output then the output of the network is 0, and if the second one outputs a high value then the output of the network is 1.
+        </p>
+        <p class="flow-text">
+          Let’s make that change.
+        </p>
+        <pre>
+          <code class="language-python flow-text">
+            model.add(tf.keras.layers.Dense(2, activation=tf.nn.softmax))
+          </code>
+        </pre>
+        <p class="flow-text">
+          We have our training data as we want it. Now we want to change the testing data set the same way.
+        </p>
+        <pre>
+          <code class="language-python flow-text">
+            y_test = np.zeros((10000,), dtype=int)
+
+            i = 0
+            for eachValue in tqdm(y_test_old):
+                if eachValue == 7:
+                    y_test[i] = 1
+            i = i+1
+          </code>
+        </pre>
+        <p class="flow-text">
+          And that’s it. Now we have a program that recognizes only one single number. 
+          If the code that saves the model and re loads it doesn’t work, just comment it. 
+        </p>
+
+        <h4>Part 5 - Game:</h4>
+        <p class="flow-text">
+          
+        </p>
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
