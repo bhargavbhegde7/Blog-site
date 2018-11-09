@@ -157,7 +157,41 @@
 
         <h4>Part 5 - Game:</h4>
         <p class="flow-text">
-          
+          The first thing we need are the screen shots of this dinosaur game we are talking about, and lots of it. The idea is to take a screen shot for each frame of the game, and save a list of labels corresponding to each screen shot. The labels will be indicating whether to jump on that particular frame or not. We need to train our model on the ideal game play. This is because we want it to know the exact frame at which the jump needs to be triggered in order to pass the obstacle that is nearing. If we want to capture the screen shots of an ideal game, we need to play an ideal game. Playing with such high accuracy is impossible for humans. So we need to automate the game when we are capturing the training data.
+        </p>
+        <p class="flow-text">
+          The problem is this game is in the browser. I couldn’t make the browser save the screen shots directly to the file system. I couldn’t just take a screen capture video of the game play because I needed a list of labels telling me each screen shot is jump worthy or not.
+        </p>
+        <p class="flow-text">
+          These problems were a bit much, and boring. So I felt it would be way easier if I just implemented a similar, but smaller game myself. Then I would have all the freedom I needed to do whatever I wanted.
+        </p>
+        <p class="flow-text">
+          I did just that, and you can find the code <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/game.py" target="_blank">here</a>. This is similar to the game we see on the chrome page, but instead of the dinosaur and the cactus plants all we have here is blocks. 
+        </p>
+        <p class="flow-text">
+          We are now ready to capture the screen shots for training our model. But to do that we need to automate our game, and then make the game save each frame along with an entry in a label file telling if the player jumps in that frame or not.
+        </p>
+        <p class="flow-text">
+          Once you understand the code for the game, it becomes pretty simple how to do the automation. <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/create_dataset.py" target="_blank">Here</a> is the code that both automates the game, and saves the screen shot on each and every frame along with its label. I have hardcoded the number of screen shots to be captured as 50000.
+        </p>
+
+        <h4>Part 6 – Data: </h4>
+        <p class="flow-text">
+          We have a model, and we have the data. If you open the dataset folder and see the samples you can see thousands of screen shots we just captured. The labels file just contains a list of image names and their corresponding “jump or not” flags.  
+        </p>
+        <p class="flow-text">
+          We need to read these images one by one and create a dataset suitable for our neural network model. To do that we are going to use opencv. Opencv helps in manipulating the images to fit the model. <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/train_n_test_n_save.py" target="_blank">Here</a> is the code for loading these screen shots as our dataset, and training the model just as we were before with handwriting data, and then testing it with some more screen shots. If everything goes smoothly, you will end up with 2 more files called ‘model.yaml’ and ‘model.h5’. The yaml file contains the model we have created. The h5 file has all the weights of the neural network. We don’t have to train our model every time we have to run the model. We can just load these two saved files into our code and get going. 
+        </p>
+        <p class="flow-text">
+          Next <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/load_n_test.py" target="_blank">here</a> is a small script to load the saved model files and test one more time just to be sure if the saved weights are loaded properly into the model. 
+        </p>
+
+        <h4>Part 7 – Play: </h4>
+        <p class="flow-text">
+          Now all we need to do is put two pieces together. We already have a game that plays itself by measuring the distance of a nearing obstacle. And we have a model that predicts if a frame is jump worthy. We have to use this model to check if a frame is jump worthy in real time.
+        </p>
+        <p class="flow-text">
+          <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/ann_game.py" target="_blank">Here</a> is the code that does just that. 
         </p>
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
