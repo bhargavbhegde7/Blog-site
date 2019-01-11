@@ -20,42 +20,30 @@
       <!-- for code highlight -->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/themes/prism.min.css">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.5.0/prism.min.js"></script>
-
-      <script type="text/javascript">
-        $(document).ready(function(){
-          $('.sidenav').sidenav();
-        });
-      </script>
             
     </head>
 
     <body>
-      <div id="allfather">
-        <nav class="blue-grey darken-3">
-          <div class="nav-wrapper">
-            <!-- <a href="#!" class="brand-logo">Bhargav</a> -->
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
-            <ul class="left hide-on-med-and-down">
-              <li ><a href="contact.html">About me</a></li>
-              <li class="active"><a href="index.html">Blog</a></li>
-            </ul>
+      <header class="page-header">
+          <div class="black-text center">
+            <h3>Code Stories</h3>
           </div>
-        </nav>
-        <ul class="sidenav" id="mobile-demo">
-          <li><a href="contact.html">About me</a></li>
-          <li class="active"><a href="index.html">Blog</a></li>
-        </ul>
+      </header>
+      <hr>
+      <div id="body-container">
+        
 
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
 
-        <h3>How to train your Dinosaur</h3>        
+        <h4><b>How to train your Dinosaur</b></h4>
+        <h6>Monday, October 22, 2018</h6>
         <div class="row">
           <img class="col s6 responsive-img" src="images/dinosaur.jpg">
           <img class="col s6 responsive-img" src="images/game_screenshot.png">
         </div>
-        <h4>Part 1 - Inception: </h4>
+        <h5><b>Part 1 - Inception:</b> </h5>
         <p class="flow-text">
           We have all seen the t-rex dinosaur game on the chrome offline page above. Agreeably it is a pretty fun game. But the problem was I couldn’t get past an average score. Being an engineer, I wanted to do something about it. I am no mathematician, I am not PhD, and neither do I hold multiple degrees. So I set out to find something with which I can hack my way in and use it for my own purposes.
         </p>
@@ -63,14 +51,14 @@
           The full code for the project can be found <a href="https://github.com/bhargavbhegde7/LearnANN" target="_blank">here</a>.
         </p>
 
-        <h4>Part 2 - Planning: </h4>
+        <h5>Part 2 - Planning: </h5>
         <p class="flow-text">
           Our requirement is something like this - we need a program that processes the game frame by frame and uses a machine learning model that recognizes the frame of the game in which the obstacle is nearing the player (dinosaur in this case) and triggers a jump. For this, we need a classification model, which can take a frame as the input. The output of our model should have a value between 0 and 1, where zero means stay down and one means jump. We repeat this process for every frame of the game in real time and trigger jump when we receive the output as 1.
         </p>
         <p class="flow-text">
           This quest led me to <a href="https://pythonprogramming.net/introduction-deep-learning-python-tensorflow-keras/" target="_blank">this</a> article where the author teaches how to implement a handwriting recognition program using tensorflow and keras. (<a href="https://github.com/bhargavbhegde7/LearnANN/blob/942bb82ced5d32d504bb5a9735e42559510fa1cd/tensorflow/handwriting.py" target="_blank">code</a>)
         </p>
-        <h4>Part 3 - Preparation: </h4>
+        <h5>Part 3 - Preparation: </h5>
         <p class="flow-text">
           This is the hardest part of the project, because it includes some actual studying, not just munching through the code like a caveman. 
         </p>
@@ -84,7 +72,7 @@
           If you take a look at the handwriting recognition code <a href="https://github.com/bhargavbhegde7/LearnANN/blob/942bb82ced5d32d504bb5a9735e42559510fa1cd/tensorflow/handwriting.py" target="_blank">here</a>, the model has four layers. One input layer - this has 784 neurons, two hidden layers and one output layer. The output layer has ten neurons, one for each digit. (What we need is the output layer to have only two neurons, one indicating 0 and other indicating 1).
         </p>
 
-        <h4>Part 4 - Proof of concept: </h4>
+        <h5>Part 4 - Proof of concept: </h5>
         <p class="flow-text">
           Now it is time to check if what we are trying to achieve actually works. If we succeed to make this model recognize a single digit instead of all 10 of them, we can be sure that we can in theory make it recognize a different set of images that we are going to give it in the later steps. 
         </p>
@@ -154,7 +142,7 @@
           If the code that saves the model and re loads it doesn’t work, just comment it. 
         </p>
 
-        <h4>Part 5 - Game:</h4>
+        <h5>Part 5 - Game:</h5>
         <p class="flow-text">
           The first thing we need are the screen shots of this dinosaur game we are talking about, and lots of it. The idea is to take a screen shot for each frame of the game, and save a list of labels corresponding to each screen shot. The labels will be indicating whether to jump on that particular frame or not. We need to train our model on the ideal game play. This is because we want it to know the exact frame at which the jump needs to be triggered in order to pass the obstacle that is nearing. If we want to capture the screen shots of an ideal game, we need to play an ideal game. Playing with such high accuracy is impossible for humans. So we need to automate the game when we are capturing the training data.
         </p>
@@ -174,7 +162,7 @@
           Once you understand the code for the game, it becomes pretty simple how to do the automation. <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/create_dataset.py" target="_blank">Here</a> is the code that both automates the game, and saves the screen shot on each and every frame along with its label. I have hardcoded the number of screen shots to be captured as 50000.
         </p>
 
-        <h4>Part 6 – Data: </h4>
+        <h5>Part 6 – Data: </h5>
         <p class="flow-text">
           We have a model, and we have the data. If you open the dataset folder and see the samples you can see thousands of screen shots we just captured. The labels file just contains a list of image names and their corresponding “jump or not” flags.  
         </p>
@@ -185,7 +173,7 @@
           Next <a href="https://github.com/bhargavbhegde7/LearnANN/blob/master/tensorflow/load_n_test.py" target="_blank">here</a> is a small script to load the saved model files and test one more time just to be sure if the saved weights are loaded properly into the model. 
         </p>
 
-        <h4>Part 7 – Play: </h4>
+        <h5>Part 7 – Play: </h5>
         <p class="flow-text">
           Now all we need to do is put two pieces together. We already have a game that plays itself by measuring the distance of a nearing obstacle. And we have a model that predicts if a frame is jump worthy. We have to use this model to check if a frame is jump worthy in real time.
         </p>
@@ -194,15 +182,15 @@
         </p>
         <!-- -------------------------------------------------------------------------------- -->
         <!-- -------------------------------------------------------------------------------- -->
-        <!-- -------------------------------------------------------------------------------- -->
-        <footer class="page-footer blue-grey darken-3">        
-          <div class="footer-copyright">
-            <div class="container">
-            © All rights reserved
-            <a class="grey-text text-lighten-4 right" href="contact.html" target="_blank">Contact information</a>
-            </div>
+        <!-- -------------------------------------------------------------------------------- -->        
+      </div>
+      <footer class="page-footer white">        
+        <div class="footer-copyright">
+          <div class="container black-text text-lighten-4">
+          © All rights reserved
+          <a class="black-text text-lighten-4 right" href="files/resume_bhargava_b_hegde.pdf" target="_blank">Contact information</a>
           </div>
-        </footer>
-      </div>            
+        </div>
+      </footer>
     </body>
   </html>

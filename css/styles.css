@@ -1,4 +1,4 @@
-#allfather{  
+#body-container{  
   width: 60%;
   margin: auto;
   padding-left: 4%;
@@ -6,19 +6,19 @@
 }
 
 @media only screen and (max-width: 1600px) {
-    #allfather{  
+    #body-container{  
   		width: 80%;
 	}
 }
 
 @media only screen and (max-width: 1000px) {
-    #allfather{  
+    #body-container{  
   		width: 90%;
 	}
 }
 
 @media only screen and (max-width: 800px) {
-    #allfather{  
+    #body-container{  
   		width: 100%;
 	}
 }
