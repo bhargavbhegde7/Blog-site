@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <script>
+   /*
+		function httpGet(theUrl)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+			xmlHttp.send( null );
+			return xmlHttp.responseText;
+		}
+		*/
+		
+		function httpGetAsync(theUrl, callback)
+		{
+			var xmlHttp = new XMLHttpRequest();
+			xmlHttp.onreadystatechange = function() { 
+				if (xmlHttp.readyState == 4 && xmlHttp.status == 200)
+					callback(xmlHttp.responseText);
+			}
+			xmlHttp.open("GET", theUrl, true); // true for asynchronous
+			xmlHttp.setRequestHeader("Access-Control-Allow-Origin", "*");
+			xmlHttp.send(null);
+		}
+		
+		function getTunnelTry(){
+			var url = document.getElementById("tunnel_url").innerHTML
+			httpGetAsync(url, function(responseText){
+				alert(responseText);
+			});
+		}
+  </script>
+ </head>
+ <body>
+  <p id="tunnel_url" style="display:none">
+   https://05a0f373.ngrok.io
+  </p>
+  <button onclick="getTunnelTry()">
+   click here
+  </button>
+ </body>
+</html>
