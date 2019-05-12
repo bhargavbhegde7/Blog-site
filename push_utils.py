@@ -1,3 +1,4 @@
+'''
 from git import Repo
 
 print("getting the repo etc")
@@ -16,17 +17,16 @@ origin.push()
 print("pushed")
 
 print("done deal!!")
-
-
 '''
+
+
 import subprocess
 import os
 os.chdir("/home/pi/bhargavbhegde7.github.io/")
-subprocess.call(["git config credential.helper store"], shell=True)
-subprocess.call(["git add ."], shell=True)
+subprocess.call(["sudo git config credential.helper store"], shell=True)
+subprocess.call(["sudo git add ."], shell=True)
 print("added")
-subprocess.call(["git commit -m \"tunnel url change\" "], shell=True)
+subprocess.call(["sudo git commit -m \"tunnel url change\" "], shell=True)
 print("committed")
-subprocess.call(["git push origin master"], shell=True)
+subprocess.call(["sudo git push origin master"], shell=True)
 print("pushed")
-'''
